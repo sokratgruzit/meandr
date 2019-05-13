@@ -14,8 +14,8 @@ const mix = require('laravel-mix');
 mix.js('resources/js/app.js', 'public/js')
     .combine([
         'resources/js/jquery-3.3.1.js',
-        'resources/js/scripts.js',
-        'resources/js/parsley.min.js'
+        'resources/js/parsley.min.js',
+        'resources/js/scripts.js'
     ], 'public/js/app.js')
     .less('resources/less/app.less', 'public/css')
     .less('resources/less/font-faces.less', 'public/css')
