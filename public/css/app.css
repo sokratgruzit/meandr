@@ -222,12 +222,12 @@
   top: 0;
   background: #f47821;
 }
-#talent_2,
-#support_2 {
+#talents_2,
+#supports_2 {
   opacity: 0;
 }
-.talent_img,
-.support_img {
+.talents_img,
+.supports_img {
   box-sizing: border-box;
   position: absolute;
   top: 5%;
@@ -235,4 +235,30 @@
   width: 500px;
   height: 500px;
   cursor: pointer;
+}
+.fun_button {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  text-decoration: none;
+  width: 230px;
+  height: 54px;
+  text-align: center;
+  font-family: Gilroy;
+  font-weight: 700;
+  left: calc(50% - 115px);
+  top: calc(500px + 10%);
+  padding-top: 19px;
+  border-radius: 113px;
+  border: 2px solid #f47821;
+  color: #000000;
+  text-transform: uppercase;
+  transition: 0.3s;
+  font-size: 12px;
+}
+.fun_button:hover {
+  background: #ebdbcf;
+}
+.fun_button:active {
+  background: #eecfb7;
 }
