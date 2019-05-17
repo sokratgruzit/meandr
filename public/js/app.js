@@ -10392,6 +10392,18 @@ $(document).ready(function() {
             width: "54px"
         });
     });
+
+    var form_inputs = $('#contact_form').children().length;
+
+    for (var i = 1; i < form_inputs; i++) {
+        var val = $('#input_' + i).attr('data-value');
+        $('#input_' + i).val(val);
+    }
+
+    $('#input_1').click(function() {
+        $('#input_1').val('');
+        $('.anim_1').css('display', 'block');
+    });
 });
 
 var src, page = window.location.pathname.split("/").pop();

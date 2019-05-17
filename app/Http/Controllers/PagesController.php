@@ -47,7 +47,34 @@ class PagesController extends Controller
             )
         );
 
-        return view('home')->with(['adv_content' => $adv_content, 'promo_content' => $promo_content]);
+        $form_inputs = array(
+            '0' => array(
+                'number' => '1',
+                'placeholder' => 'Фамилия и имя',
+                'name' => 'client_name'
+            ),
+            '1' => array(
+                'number' => '2',
+                'placeholder' => 'Электронная почта',
+                'name' => 'client_email'
+            ),
+            '2' => array(
+                'number' => '3',
+                'placeholder' => 'Телефон',
+                'name' => 'client_phone'
+            ),
+            '3' => array(
+                'number' => '4',
+                'placeholder' => 'Какой деятельностью, не связанной с текущими проектами, вы бы хотели заниматься в рабочее время?',
+                'name' => 'client_performance'
+            )
+        );
+
+        return view('home')->with([
+            'adv_content' => $adv_content, 
+            'promo_content' => $promo_content,
+            'form_inputs' => $form_inputs
+        ]);
     }
 
     public function talents() {
