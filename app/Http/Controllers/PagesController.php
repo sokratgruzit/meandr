@@ -51,21 +51,25 @@ class PagesController extends Controller
             '0' => array(
                 'number' => '1',
                 'placeholder' => 'Фамилия и имя',
+                'class' => 'anim_1',
                 'name' => 'client_name'
             ),
             '1' => array(
                 'number' => '2',
                 'placeholder' => 'Электронная почта',
+                'class' => 'anim_2',
                 'name' => 'client_email'
             ),
             '2' => array(
                 'number' => '3',
                 'placeholder' => 'Телефон',
+                'class' => 'anim_3',
                 'name' => 'client_phone'
             ),
             '3' => array(
                 'number' => '4',
                 'placeholder' => 'Какой деятельностью, не связанной с текущими проектами, вы бы хотели заниматься в рабочее время?',
+                'class' => 'anim_4',
                 'name' => 'client_performance'
             )
         );
@@ -88,7 +92,8 @@ class PagesController extends Controller
     }
 
     public function ajaxContactForm(Request $request) {
-
+        dd($request->input('client_name'));
+        
         return redirect()->back();
     }
 }

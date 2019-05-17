@@ -321,7 +321,78 @@
   letter-spacing: -0.01em;
   color: rgba(255, 255, 255, 0.3);
   position: absolute;
-  display: none;
+  bottom: 10px;
+  z-index: 10;
+  left: 0;
+  width: 100%;
+}
+#form_section .form_wrapper #contact_form .input_wrapper .anim_input {
+  -webkit-animation-name: anim_text;
+          animation-name: anim_text;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+#form_section .form_wrapper #contact_form .input_wrapper .anim_back_input {
+  -webkit-animation-name: anim_text_back;
+          animation-name: anim_text_back;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+@-webkit-keyframes anim_text {
+  from {
+    font-size: 24px;
+    bottom: 10px;
+    color: rgba(255, 255, 255, 0.3);
+  }
+  to {
+    font-size: 16px;
+    bottom: 35%;
+    color: #ffffff;
+  }
+}
+@keyframes anim_text {
+  from {
+    font-size: 24px;
+    bottom: 10px;
+    color: rgba(255, 255, 255, 0.3);
+  }
+  to {
+    font-size: 16px;
+    bottom: 35%;
+    color: #ffffff;
+  }
+}
+@-webkit-keyframes anim_text_back {
+  from {
+    font-size: 16px;
+    bottom: 35%;
+    color: #ffffff;
+  }
+  to {
+    font-size: 24px;
+    bottom: 10px;
+    color: rgba(255, 255, 255, 0.3);
+  }
+}
+@keyframes anim_text_back {
+  from {
+    font-size: 16px;
+    bottom: 35%;
+    color: #ffffff;
+  }
+  to {
+    font-size: 24px;
+    bottom: 10px;
+    color: rgba(255, 255, 255, 0.3);
+  }
 }
 #form_section .form_wrapper #contact_form .input_wrapper .form_input {
   box-sizing: border-box;
@@ -338,6 +409,8 @@
   letter-spacing: -0.01em;
   color: rgba(255, 255, 255, 0.3);
   padding-top: 110px;
+  position: relative;
+  z-index: 1000;
 }
 #form_section .form_wrapper #contact_form .contact_form_submit_btn {
   box-sizing: border-box;

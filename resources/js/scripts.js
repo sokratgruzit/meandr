@@ -1,4 +1,10 @@
 $(document).ready(function() {
+    $('.contact_form_open_btn_wrapper').click(function() {
+        $('html, body').animate({
+            scrollTop: parseInt($("#form_section").offset().top)
+        }, 2000);
+    });
+
     $('.contact_form_open_btn_wrapper').mouseenter(function() {
         $('.animated_icon').animate({
             width: "100%"
@@ -12,17 +18,16 @@ $(document).ready(function() {
     });
 
     var form_inputs = $('#contact_form').children().length;
-    var curI;
 
-    for (var i = 1; i < form_inputs; i++) {
-        var val = $('#input_' + i).attr('data-value');
-        
-        $('#input_' + i).val(val);
-    }
-
-    $('#input_1').click(function() {
-        $('#input_1').val('');
-        $('.anim_1').css('display', 'block');
+    $('#contact_form').click(function(e) {
+        for (var i = 1; i < $('#contact_form').children().length - 1; i++) {
+            if (e.target.id === 'input_' + i) {
+                $('#' + e.target.id).val('');
+                $('.anim_' + i).addClass('anim_input').removeClass('anim_back_input');
+            } else {
+                $('.anim_' + i).removeClass('anim_input').addClass('anim_back_input');
+            }
+        }
     });
 });
 
