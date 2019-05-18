@@ -52,6 +52,7 @@
   border-radius: 111px;
   width: 54px;
   height: 54px;
+  cursor: pointer;
 }
 #offer .offer_wrapper .contact_form_open_btn_wrapper .union {
   box-sizing: border-box;
@@ -61,6 +62,7 @@
   left: 20px;
   top: calc(50% - 7px);
   background: url('/img/plus.svg') no-repeat center center;
+  cursor: pointer;
 }
 #offer .offer_wrapper .contact_form_open_btn_wrapper .contact_form_open_btn {
   box-sizing: border-box;
@@ -412,6 +414,21 @@
   position: relative;
   z-index: 1000;
 }
+#form_section .form_wrapper #contact_form .input_wrapper .form_input::-webkit-input-placeholder-shown {
+  background: red;
+}
+#form_section .form_wrapper #contact_form .input_wrapper .form_input::-moz-placeholder-shown {
+  background: red;
+}
+#form_section .form_wrapper #contact_form .input_wrapper .form_input:-ms-input-placeholder-shown {
+  background: red;
+}
+#form_section .form_wrapper #contact_form .input_wrapper .form_input::-ms-input-placeholder-shown {
+  background: red;
+}
+#form_section .form_wrapper #contact_form .input_wrapper .form_input::placeholder-shown {
+  background: red;
+}
 #form_section .form_wrapper #contact_form .contact_form_submit_btn {
   box-sizing: border-box;
   background: #ffffff;
@@ -436,4 +453,23 @@
 }
 #form_section .form_wrapper #contact_form .contact_form_submit_btn:active {
   background: #d3cfcf;
+}
+#form_section .form_wrapper .validation_popup {
+  box-sizing: border-box;
+  position: fixed;
+  width: 295px;
+  height: 65px;
+  background: #ffffff;
+  border: 2px solid #000000;
+  border-radius: 6px;
+  left: calc(50% - 100px);
+  top: 10%;
+  padding: 10px;
+  display: none;
+  z-index: 10000;
+}
+#form_section .form_wrapper .validation_popup .validation_popup_text {
+  box-sizing: border-box;
+  font-size: 14px;
+  font-family: Roboto;
 }

@@ -56,6 +56,7 @@
                 border-radius: 111px;
                 width: 54px;
                 height: 54px;
+                cursor: pointer;
             }
 
             .union {
@@ -66,6 +67,7 @@
                 left: 20px;
                 top: calc(~"50% - 7px");
                 background: url('/img/plus.svg') no-repeat center center;
+                cursor: pointer;
             }
         
             .contact_form_open_btn {
@@ -425,6 +427,10 @@
                     position: relative;
                     z-index: 1000;
                 }
+
+                .form_input::placeholder-shown {
+                    background: red;
+                }
             }
 
             .contact_form_submit_btn {
@@ -453,6 +459,27 @@
 
             .contact_form_submit_btn:active {
                 background: rgb(211, 207, 207);
+            }
+        }
+
+        .validation_popup {
+            box-sizing: border-box;
+            position: fixed;
+            width: 295px;
+            height: 65px;
+            background: rgb(255, 255, 255);
+            border: 2px solid rgb(0, 0, 0);
+            border-radius: 6px;
+            left: calc(~"50% - 100px");
+            top: 10%;
+            padding: 10px;
+            display: none;
+            z-index: 10000;
+
+            .validation_popup_text {
+                box-sizing: border-box;
+                font-size: 14px;
+                font-family: Roboto;
             }
         }
     }

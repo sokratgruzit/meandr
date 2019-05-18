@@ -12,5 +12,9 @@
             @endforeach
             <button id="submit_contact_form" type="submit" class="contact_form_submit_btn item">Отправить</button>
         </form>
+        <div class="validation_popup">
+            <i class="fas fa-exclamation-triangle"></i>
+            <span class="validation_popup_text"></span>
+        </div>
     </div>
 </section>
